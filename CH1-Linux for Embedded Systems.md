@@ -25,7 +25,8 @@
 - The Yocto Project: is not a single open source project but represents an entire family of projects that are developed and maintained under its umbrella.
 
 ### 1.3 A Custom Linux Distribution—Why Is It Hard?
+- building and maintaining an operating system is not a trivial task. Many different aspects of the operating system have to be taken into consideration to create a fully functional computer system:
+- Bootloader: The bootloader is the first piece of software responsible for initializing the hardware, loading the operating system kernel into RAM, and then starting the kernel. - Kernel: is the core of an operating system. It manages the hardware resources of the system and provides hardware abstraction through its APIs to other software.
+- Device Drivers: They provide application software with access to hardware devices in a structured form through kernel system calls.
+  ![image](https://github.com/Rabie45/Embedded-Linux-System-with-the-Yocto-Project/assets/76526170/8d775f14-c46b-40ff-a84c-48f1188db08c)
 
-     - building and maintaining an operating system is not a trivial task. Many
-
-different aspects of the operating system have to be taken into consideration to create a fully functional computer system: - Bootloader: The bootloader is the first piece of software responsible for initializing the hardware, loading the operating system kernel into RAM, and then starting the kernel. - Kernel: is the core of an operating system. It manages the hardware resources of the system and provides hardware abstraction through its APIs to other software. - Device Drivers: They provide application software with access to hardware devices in a structured form through kernel system calls.
