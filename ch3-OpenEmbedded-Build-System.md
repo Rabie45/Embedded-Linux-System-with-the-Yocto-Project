@@ -25,6 +25,8 @@ Libraries are copied to /usr/lib and application-specific subdirectories inside
 single archive file for distribution and direct installation on a target system
 
 ## 3.2 OpenEmbedded Workflow
+![image](https://github.com/user-attachments/assets/5434a4cb-6356-4fa3-b698-50f860f06359)
+
 - Metadata Files are subdivided into the categories configuration files and recipes.
   - Configuration Files Configuration files contain global build system settings in the form of simple variable
 assignments. Recipes can also set and overwrite variables,
@@ -59,6 +61,7 @@ into a root filesystem staging area using the package management system.
   - Build system
   - Build environment
   - Metadata layers
+    ![image](https://github.com/user-attachments/assets/fb798dca-8eb8-4c62-9cf2-a32f16d119d0)
 
  - Build System Structure
    - The directories starting with meta are all metadata layers:
@@ -106,4 +109,6 @@ packages.
  - 3.3.3 Metadata Layer Structure
    - Metadata layers are containers to group and organize recipes, classes, configuration files,
 and other metadata into logical entities.
+![image](https://github.com/user-attachments/assets/6a44b69c-5708-4caf-8906-e7f6236ce839)
+
 
