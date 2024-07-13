@@ -1,0 +1,76 @@
+# BitBake Build Engine
+- BitBake is a build tool comparable to Make and Apache Ant
+## 4.1 Obtaining and Installing BitBake
+  - BitBake is a Yocto Project subproject jointly maintained by OpenEmbedded and the Yocto Project.
+### 4.2.1 BitBake Execution Environment
+  - BitBake first searches for the conf/bblayers.conf configuration BitBake expects this file to contain a variable called BBLAYERS, which contains a
+list of paths to directories where the layers included in the build environment can be
+found.
+
+```
+BBPATH = “${TOPDIR}”
+BBFILES ?= ””
+BBLAYERS ?= ” \
+/path/to/directory/for/layer1 \
+/path/to/directory/for/layer2 \
+/path/to/directory/for/layer3 \
+”
+BBPATH .= “:${LAYERDIR}”
+# We have recipes-* directories, add to BBFILES
+BBFILES += “${LAYERDIR}/recipes-*/*/*.bb \
+${LAYERDIR}/recipes-*/*/*.bbappend”
+BBFILE_COLLECTIONS += “layer1”
+BBFILE_PATTERN_layer1 = “^${LAYERDIR}/”
+BBFILE_PRIORITY_layer1 = “6”
+```
+  - BBPATH: BitBake uses this variable to locate classes (.bbclass files) in a
+subdirectory named classes and configuration files (.conf files) in a
+subdirectory called conf and subdirectories thereof. The variable contains a list of
+colon-delimited directory paths.
+  - BBFILES: This variable contains a list of paths with wildcards, for the recipe files.
+  - BBFILE_COLLECTIONS: Contains a list of the names of configured layers. This
+list is used by BitBake to find other BBFILE_* variables in its data directory. Each
+layer typically adds its own name to the list.
+BBFILE_PATTERN: A regular expression telling BitBake how to locate recipe files
+from this layer within BBFILES.
+  - BBFILE_PRIORITY: Assigns a priority to the recipes contained in this layer.
+## 4.3 BitBake Metadata
+ - Variables: Variables are assigned values and expressions that evaluate to values.
+ - Executable metadata are functions and tasks embedded in recipes and classes that are executed by BitBake within the context of a recipe.
+ - Metadata is organized in five categories of files:
+ - Variables: Variables are assigned values and expressions that evaluate to values.
+ - Executable Metadata: Executable metadata are functions and tasks embedded in recipes and classes that are executed by BitBake within the context of a recipe.
+ - Configuration Files (.conf): Metadata placed in configuration files is global and affects all recipes referencing them.
+ - Recipe Files (.bb): Recipes contain the metadata that describes a particular software package and how that software package is built.
+ - Class files provide a simple inheritance mechanism for recipes to share the same build instructions.
+ - Append Files (.bbappend): Append files are extensions to recipe files. Typically, a layer uses append files to extend a recipe contained in another layer.
+ - Include Files (.inc): Any metadata file can include other files using the include and require directives.
+
+## 4.4 Metadata Syntax
+ - BitBake metadata files employ a specific syntax that is rather straightforward. To some extent, it is similar to what you may be familiar with from Makefiles and shell scripts.
+ - Variable Names
+ - Variable Scope
+ - Variable Assignment
+ - Direct Value Assignment (=)
+ - Default Value Assignment (?=)
+ - Weak Default Value Assignment (??=)
+ - Variable Expansion
+ - Immediate Variable Expansion
+ - Python Variable Expansion
+ - Variable Appending and Prepending
+ - Appending (+=) and Prepending (=+) with Space
+ - Appending (.=) and Prepending (=.) without Space
+ - Appending and Prepending Using the _append and _prepend Operators
+ - Removing (_remove)
+ - Conditional Variable Assignment
+ - Conditional Variable Setting
+ - Conditional Appending and Prepending
+## 4.4.3 Inclusion
+ - When using option inclusion with the include directive, BitBake attempts to locate
+the include file but silently continue operation even if it cannot find the file. Conversely,
+required inclusion with the required directive causes BitBake to exit with an error
+message.
+ 
+## 4.4.4 Inheritance
+ - Classes can be inherited by recipes, append files, and other classes using the inherit directive:
+inherit myclass
