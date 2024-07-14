@@ -62,7 +62,10 @@ managers do not install these packages even if they are available.
 name is always implicitly part of that list.
     - RCONFLICTS: List of names of conflicting packages.
     - RREPLACES: List of names of packages this package replaces.
-## Writing a New Recipe
+    - 
+# Writing a New Recipe
+![Screenshot from 2024-07-14 08-56-47](https://github.com/user-attachments/assets/6f183f29-fa9a-40a8-9884-40054b6ce2fb)
+
  - Skeleton Recipe
 ```
 SUMMARY = ””
