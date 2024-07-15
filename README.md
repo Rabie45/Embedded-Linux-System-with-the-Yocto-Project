@@ -12,7 +12,7 @@ is a comprehensive book that provides a detailed introduction and guide to using
 - [x] 5 Troubleshooting
 - [x] 6 Linux System Architecture
 - [x] 7 Building a Custom Linux Distribution
-- [ ] 8 Software Package Recipes
+- [x] 8 Software Package Recipes
 - [ ] 9 Kernel Recipes
 - [ ] 10 Board Support Packages
 - [ ] 11 Application Development
