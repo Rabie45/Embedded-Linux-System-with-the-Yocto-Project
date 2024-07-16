@@ -14,7 +14,7 @@ is a comprehensive book that provides a detailed introduction and guide to using
 - [x] 7 Building a Custom Linux Distribution
 - [x] 8 Software Package Recipes
 - [x] 9 Kernel Recipes
-- [ ] 10 Board Support Packages
+- [x] 10 Board Support Packages
 - [ ] 11 Application Development
 - [ ] 12 Licensing and Compliance
 - [ ] 13 Advanced Topics
