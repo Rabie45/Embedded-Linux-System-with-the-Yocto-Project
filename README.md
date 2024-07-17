@@ -15,6 +15,6 @@ is a comprehensive book that provides a detailed introduction and guide to using
 - [x] 8 Software Package Recipes
 - [x] 9 Kernel Recipes
 - [x] 10 Board Support Packages
-- [ ] 11 Application Development
+- [x] 11 Application Development
 - [ ] 12 Licensing and Compliance
 - [ ] 13 Advanced Topics
