@@ -139,6 +139,8 @@ Toaster production setup
 ```source oe-init-build-env build2
 source toaster start webport=0.0.0.0:8400
 ```
+![Screenshot from 2024-07-18 10-15-01](https://github.com/user-attachments/assets/737fd61c-155d-4e11-b8df-1daea051acd1)
+
 ### 13.1.4 Toaster Configuration
 - Toaster operation can be configured and administrated through command-line options,
 environment variables, and the Django administrative user interface.
@@ -233,7 +235,8 @@ themselves with the controller.
 web user interface and stores them in the file yocto-
 autobuilder/.htpasswd.
 
-
+After build
+![Screenshot from 2024-07-18 11-10-11](https://github.com/user-attachments/assets/7c16b1ed-391d-455c-b527-cb36868cb575)
 
 
 
